@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getUserById, registerUser } from "../controllers/usuarios.controller.ts";
+import { obtenerUsuarios, registerUser } from "../controllers/usuarios.controller.ts";
 
 const router = Router();
 
-router.get("/find/:id", getUserById);
+router.get("/find",  obtenerUsuarios);
 
 router.get("/register", registerUser);
 
